@@ -1,0 +1,727 @@
+@charset "UTF-8";
+@import url("grid.css");
+img {
+    max-width: 100%;
+    height: auto;
+    /*高さ自動*/
+    text-align: center;
+}
+
+a {
+    display: block;
+    color: #666;
+    text-decoration-line: none;
+}
+
+a:hover {
+    color: #999;
+}
+
+a img:hover {
+    opacity: 0.8;
+}
+
+.underline {
+    border-bottom: 3px solid #000;
+    padding-bottom: 0.5rem;
+}
+
+.center {
+    text-align: center;
+}
+
+/*ヘッダー
+-------------------------------------*/
+
+.head {
+    text-align: center;
+    flex-direction: row;
+    margin: 0 3rem 0 3rem;
+    padding: 0;
+}
+
+/*ナビゲーション
+-------------------------------------*/
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+nav li {
+    display: block;
+    flex: 0 0 calc(100%/6);
+}
+
+nav li a {
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a {
+    padding: 0.5rem;
+}
+
+/*メイン画像*/
+
+.mainimg {
+    border: 0;
+    padding-right: 10rem;
+    padding-left: 10rem;
+    text-align: center;
+    position: relative;
+}
+
+.mainimg img {
+    width: 70%;
+    filter: brightness(50%)
+}
+
+/*メインコンテンツ*/
+
+main {
+    margin: 0;
+    width: 100%;
+}
+
+/*サブページ共通*/
+
+#wrap {
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+
+#content {
+    padding-right: 1rem;
+    width: 80%;
+    float: right;
+}
+
+#content p {
+    padding-left: 1rem;
+}
+
+/*--目次*/
+
+.infotitle h4 {
+    margin: 0.5rem 0;
+    padding: 1rem 0 1rem 3rem;
+    background-color: rgba(41, 158, 97, 0.5);
+    font-weight: bold;
+}
+
+.infotitle h5 {
+    margin: 0.5rem 0;
+    padding: 1rem 0 1rem 4rem;
+    background-color: rgba(41, 158, 97, 0.3);
+    font-weight: bold;
+}
+
+/*--テーブル*/
+
+/*----会社情報テーブル*/
+
+.tableinfo {
+    margin: 0.5rem 0 0.5rem 0;
+    width: 100%;
+}
+
+.tableinfo th, .tableinfo td {
+    border: 1px solid #ccc;
+}
+
+.tableinfo th {
+    padding: 1rem 0 1rem 0;
+    width: 25%;
+    font-weight: bold;
+    background-color: rgba(160, 216, 239, 1);
+    text-align: center;
+}
+
+.tableinfo p {
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+/*----処理可能産廃テーブル*/
+
+.tablecategory {
+    margin: 0.5rem 0 0.5rem 0;
+    width: 100%;
+}
+
+.tablecategory th, .tablecategory td {
+    border: 1px solid #ccc;
+}
+
+.tablecategory th {
+    padding: 1rem 0 1rem 0;
+    width: 35%;
+    font-weight: bold;
+    background-color: rgba(160, 216, 239, 1);
+    text-align: center;
+}
+
+.tablecategory td {
+    padding: 1rem;
+}
+
+/*----収集運搬車両テーブル*/
+
+.tablevehicle {
+    margin: 0 0 0.5rem 0;
+    width: 100%;
+}
+
+.tablevehicle th, .tablevehicle td {
+    border: 1px solid #ccc;
+}
+
+.tablevehicle th {
+    padding: 1rem 0 1rem 0;
+    width: 12.5%;
+    font-weight: bold;
+    background-color: rgba(160, 216, 239, 1);
+    text-align: center;
+}
+
+.tablevehicle td {
+    width: 12.5%;
+    padding: 1rem;
+    text-align: center;
+}
+
+/*----事業内容カテゴリーテーブル*/
+
+.serviceinfo {
+    margin: 0;
+    width: 100%;
+}
+
+.serviceinfo th {
+    padding: 1rem 0 1rem 0;
+    width: 82%;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+.serviceinfo p {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.serviceinfo td {
+    padding-right: 0.5rem;
+    width: 18%;
+    text-align: right;
+}
+
+.serviceinfo ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.5rem 0 0 3rem;
+    list-style-type: square;
+}
+
+/*----処分可能カテゴリーテーブル*/
+
+.iteminfo {
+    margin: 0;
+    width: 100%;
+}
+
+.iteminfo th {
+    padding: 1rem 0 1rem 0;
+    width: 70%;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+.iteminfo p {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.iteminfo td {
+    padding-right: 0.5rem;
+    width: 30%;
+    text-align: right;
+}
+
+.iteminfo ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.5rem 0 0 3rem;
+    list-style-type: square;
+}
+
+p.detail {
+    padding-top: 1rem;
+    font-weight: bold;
+}
+
+/*----SDGsバナーテーブル*/
+
+.sdgstable {
+    margin: 0em;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.sdgstable li {
+    width: 17%;
+    padding: 3px 5px 0 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sdgstable li img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*----SDGs取り組みテーブル*/
+
+.sdgsinfo {
+    margin: 0;
+    width: 100%;
+}
+
+.sdgsinfo th {
+    padding: 1rem 0 1rem 0;
+    width: 55%;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+.sdgsinfo td {
+    padding-right: 0.5rem;
+    width: 40%;
+    text-align: right;
+}
+
+/*----求人像テーブル*/
+
+.tablerec {
+    margin: 0.5rem 0 0.5rem 0;
+    width: 100%;
+    color: #a12c59;
+}
+
+.tablerec td {
+    border: 1px solid #ccc;
+    width: 12.5%;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/*----お問い合わせ先テーブル*/
+
+.tablecon {
+    margin: 0.5rem 0 0.5rem 0;
+    width: 100%;
+}
+
+.tablecon th, .tablecon td {
+    border: 1px solid #ccc;
+}
+
+.tablecon th {
+    padding: 1rem 0 1rem 0;
+    width: 20%;
+    font-weight: bold;
+    background-color: rgba(160, 216, 239, 1);
+    text-align: center;
+}
+
+.tablecon td {
+    width: auto;
+}
+
+.qrcode {
+    text-align: center;
+    vertical-align: top;
+}
+
+.qrcode img {
+    padding: 0.3rem 0 0 0;
+    max-width: 25%;
+    height: auto;
+}
+
+/*業務内容ページ*/
+
+.waste_cat p {
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.process {
+    text-align: center;
+}
+
+.iteminfo {
+    margin: 0;
+    padding: 3rem 3rem 3rem 1rem;
+    text-align: center;
+}
+
+.iteminfo img {
+    width: 94%
+}
+
+.theme {
+    font-weight: bold;
+    margin-left: 3rem;
+    margin-bottom: 0;
+}
+
+/*取り組みページ*/
+
+.ecopolicy {
+    margin: 0 15rem 0 1rem;
+    padding: 0 30% 0 3rem;
+    width: 100%;
+}
+
+.sdgsinfo {
+    margin: 0;
+    padding: 3rem 3rem 3rem 1rem;
+    text-align: center;
+}
+
+.sdgsinfo img {
+    width: 94%
+}
+
+.sdgspolicy {
+    text-align: left;
+}
+
+/*採用情報ページ*/
+
+.personality p {
+    padding: 1rem 0 0 3rem;
+}
+
+.personality span {
+    font-weight: bold;
+}
+
+/*お問い合わせページ*/
+
+.conpro p {
+    margin-bottom: 0;
+}
+
+.conlist {
+    margin: 0;
+    padding: 0 0 0 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+ul.link {
+    font-size: 2rem;
+    list-style-type: none;
+}
+
+ul.link li {
+    padding: 1rem 0 0 3rem;
+}
+
+/*PCサイドコンテンツ*/
+
+#side {
+    padding-top: 3rem;
+    padding-left: 1rem;
+    width: 19.5%;
+    float: left;
+}
+
+#side h5 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    padding-left: 1rem;
+    font-weight: bold;
+    background-color: rgba(253, 105, 37, 0.7);
+    text-align: center;
+}
+
+.smallfont {
+    font-size: 1rem;
+}
+
+#side img {
+    margin-top: 0.5rem;
+    padding-top: 0;
+    padding: 0.3px;
+}
+
+.aria_info {
+    padding-left: 1rem;
+    margin-bottom: 0;
+    font-size: 1.3rem;
+}
+
+.note {
+    margin-top: 0;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+.ecoaction21 {
+    text-align: center;
+    width: 100%;
+}
+
+.ecoaction21 img {
+    width: 40%;
+    border: solid 1px #ccc;
+}
+
+.tel {
+    padding: 0;
+    border-left: 2px solid rgba(253, 105, 37, 0.7);
+    border-right: 2px solid rgba(253, 105, 37, 0.7);
+    border-bottom: 2px solid rgba(253, 105, 37, 0.7);
+}
+
+.tel h6 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tel h4 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tel img {
+    width: 30%;
+}
+
+.telp {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*スマートデバイスサイドコンテンツ*/
+
+.smp_side {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 3rem 3rem 0 3rem;
+    width: 100%;
+    text-align: center;
+}
+
+.smp_side td {
+    width: 40%
+}
+
+.smp_side h5 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    padding-left: 1rem;
+    font-weight: bold;
+    background-color: rgba(253, 105, 37, 0.7);
+    text-align: center;
+}
+
+.smp_side img {
+    margin-top: 0.5rem;
+    padding-top: 0;
+    padding: 0.3px;
+}
+
+.smp_ecoaction21 {
+    text-align: center;
+    width: 100%;
+}
+
+.smp_ecoaction21 img {
+    border: solid 1px #ccc;
+}
+
+/*フッター*/
+
+footer {
+    margin: 0 3rem;
+    background-color: #fff;
+    clear: both;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    /*PCの時の設定～*/
+    .mtop img {
+        width: 10rem;
+    }
+    .msub img {
+        width: 40rem;
+    }
+    .mainimg_text {
+        position: absolute;
+        color: white;
+        font-weight: bold;
+        font-size: 5rem;
+        font-family: Quicksand, sans-serif;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .ntop {
+        font-size: 3.5rem;
+    }
+    .smp_mainnavi {
+        display: none;
+    }
+    .smp_side {
+        display: none;
+    }
+    #navi {
+        display: block !important;
+    }
+    /*コピーライト*/
+    .copyright {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        background-color: #fff;
+    }
+    /*～PCの時の設定*/
+}
+
+@media screen and (max-width: 768px) {
+    /*スマホの時の設定～*/
+    .head {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .body {
+        margin-right: 3rem;
+    }
+    .mtop img {
+        width: 8rem;
+    }
+    .msub img {
+        width: 30rem;
+    }
+    .telbox {
+        margin-left: 0;
+        text-align: center;
+    }
+    .pc_mainnavi {
+        display: none;
+    }
+    #side {
+        display: none;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        padding-top: 0;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 0;
+    }
+    .mainimg img {
+        width: 100%;
+    }
+    .mainimg p {
+        position: absolute;
+        color: white;
+        font-weight: bold;
+        font-size: 1em;
+        font-family: Quicksand, sans-serif;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 1em;
+    }
+    .smp_mainnavi {
+        clear: both;
+    }
+    /*コピーライト*/
+    .copyright {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        background-color: #fff;
+    }
+    /*サブページ*/
+    #wrap {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    #content, #side {
+        float: none;
+        width: 100%;
+    }
+    #side {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+    #side img {
+        text-align: center;
+    }
+    /*会社情報ページ*/
+    .incinfo {
+        width: 100%;
+    }
+    .incinfo tr, .incinfo td, .incinfo th {
+        display: block;
+        text-align: center;
+    }
+    .incinfo td {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /*会社情報ページ*/
+    .ecopolicy {
+        padding: 0 0 0 3rem;
+    }
+    /*～スマホの時の設定*/
+}
+
+/*印刷設定*/
+
+@media print {
+    .smp_mainnavi {
+        display: none;
+    }
+}
