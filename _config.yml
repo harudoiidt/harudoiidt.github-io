@@ -1,5 +1,2 @@
 plugins:
   - jekyll-sitemap
-  
-plugins:
-  - jekyll-seo-tag
