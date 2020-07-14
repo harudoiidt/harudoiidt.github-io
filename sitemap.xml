@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<url>
+  <loc>https://doiidt.com/</loc>
+  <priority>1.0</priority>
+  <lastmod>2020-07-14T20:29:34+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://doiidt.com/index.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2020-07-14T20:29:34+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://doiidt.com/service.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2020-07-14T20:29:34+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://doiidt.com/item.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2020-07-14T20:29:34+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://doiidt.com/company.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2020-07-14T20:29:34+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://doiidt.com/csr.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2020-07-14T20:29:34+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://doiidt.com/recruit.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2020-07-14T20:29:34+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://doiidt.com/contact_us.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2020-07-14T20:29:34+09:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+
+</urlset>
