@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("grid.css");
+
 img {
     max-width: 100%;
     height: auto;
@@ -71,6 +72,51 @@ nav a {
     padding: 0.5rem;
 }
 
+/*お知らせ*/
+
+.infomain {
+    padding-top: 0.6rem;
+    text-align: center;
+    background-color: #000;
+}
+
+.infomain p {
+    display: inline-block;
+    animation: bounce 1s infinite;
+    font-size: 2.0rem;
+    margin: 0;
+    color: #fff;
+    font-weight: bold
+}
+
+.infosub {
+    padding-top: 0.6rem;
+    text-align: center;
+    background-color: #000080;
+}
+
+.infosub p {
+    display: inline-block;
+    animation: bounce 1s infinite;
+    font-size: 2.0rem;
+    margin: 0;
+    color: #fff;
+    font-weight: bold
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-1rem);
+    }
+}
+
+
 /*メイン画像*/
 
 .mainimg {
@@ -135,7 +181,8 @@ main {
     width: 100%;
 }
 
-.tableinfo th, .tableinfo td {
+.tableinfo th,
+.tableinfo td {
     border: 1px solid #ccc;
 }
 
@@ -159,7 +206,8 @@ main {
     width: 100%;
 }
 
-.tablecategory th, .tablecategory td {
+.tablecategory th,
+.tablecategory td {
     border: 1px solid #ccc;
 }
 
@@ -182,7 +230,8 @@ main {
     width: 100%;
 }
 
-.tablevehicle th, .tablevehicle td {
+.tablevehicle th,
+.tablevehicle td {
     border: 1px solid #ccc;
 }
 
@@ -334,7 +383,8 @@ p.detail {
     width: 100%;
 }
 
-.tablecon th, .tablecon td {
+.tablecon th,
+.tablecon td {
     border: 1px solid #ccc;
 }
 
@@ -577,13 +627,16 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+
     /*PCの時の設定～*/
     .mtop img {
         width: 10rem;
     }
+
     .msub img {
         width: 40rem;
     }
+
     .mainimg_text {
         position: absolute;
         color: white;
@@ -597,18 +650,23 @@ footer {
         padding: 0;
         width: 100%;
     }
+
     .ntop {
         font-size: 3.5rem;
     }
+
     .smp_mainnavi {
         display: none;
     }
+
     .smp_side {
         display: none;
     }
+
     #navi {
         display: block !important;
     }
+
     /*コピーライト*/
     .copyright {
         font-size: 1.5rem;
@@ -617,51 +675,63 @@ footer {
         margin: 0;
         background-color: #fff;
     }
+
     /*～PCの時の設定*/
 }
 
 @media screen and (max-width: 768px) {
+
     /*スマホの時の設定～*/
     .head {
         flex-direction: column;
         text-align: center;
         margin-bottom: 0;
     }
+
     .body {
         margin-right: 3rem;
     }
+
     .mtop img {
         width: 8rem;
     }
+
     .msub img {
         width: 30rem;
     }
+
     .telbox {
         margin-left: 0;
         text-align: center;
     }
+
     .pc_mainnavi {
         display: none;
     }
+
     #side {
         display: none;
     }
+
     nav ul {
         flex-direction: column;
     }
+
     nav li {
         padding-top: 0;
         border-bottom: 1px solid #ccc;
         margin-bottom: 0;
     }
+
     .mainimg img {
         width: 100%;
     }
+
     .mainimg p {
         position: absolute;
         color: white;
         font-weight: bold;
-        font-size: 1em;
+        font-size: 3rem;
         font-family: Quicksand, sans-serif;
         top: 50%;
         left: 50%;
@@ -669,9 +739,11 @@ footer {
         margin: 0;
         padding: 1em;
     }
+
     .smp_mainnavi {
         clear: both;
     }
+
     /*コピーライト*/
     .copyright {
         font-size: 1rem;
@@ -680,15 +752,19 @@ footer {
         margin: 0;
         background-color: #fff;
     }
+
     /*サブページ*/
     #wrap {
         margin-left: 1rem;
         margin-right: 1rem;
     }
-    #content, #side {
+
+    #content,
+    #side {
         float: none;
         width: 100%;
     }
+
     #side {
         margin-right: 1rem;
         margin-left: 1rem;
@@ -696,25 +772,33 @@ footer {
         width: 100%;
         text-align: center;
     }
+
     #side img {
         text-align: center;
     }
+
     /*会社情報ページ*/
     .incinfo {
         width: 100%;
     }
-    .incinfo tr, .incinfo td, .incinfo th {
+
+    .incinfo tr,
+    .incinfo td,
+    .incinfo th {
         display: block;
         text-align: center;
     }
+
     .incinfo td {
         padding-left: 0;
         padding-right: 0;
     }
+
     /*会社情報ページ*/
     .ecopolicy {
         padding: 0 0 0 3rem;
     }
+
     /*～スマホの時の設定*/
 }
 
