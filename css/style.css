@@ -75,7 +75,7 @@ nav a {
 /*お知らせ*/
 
 .infomain {
-    padding-top: 0.7rem;
+    padding-top: 0.6rem;
     text-align: center;
     background-color: #000;
 }
@@ -157,6 +157,12 @@ main {
 }
 
 /*--目次*/
+.infotitle h3 {
+    margin: 0.5rem 0;
+    padding: 1rem 0 1rem 3rem;
+    background-color: rgba(41, 158, 97, 0.85);
+    font-weight: bold;
+}
 
 .infotitle h4 {
     margin: 0.5rem 0;
