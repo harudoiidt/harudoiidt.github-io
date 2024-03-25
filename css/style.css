@@ -75,7 +75,7 @@ nav a {
 /*お知らせ*/
 
 .infomain {
-    padding-top: 0.6rem;
+    padding-top: 0.7rem;
     text-align: center;
     background-color: #000;
 }
@@ -90,7 +90,7 @@ nav a {
 }
 
 .infosub {
-    padding-top: 0.6rem;
+    padding-top: 0.rem;
     text-align: center;
     background-color: #000080;
 }
