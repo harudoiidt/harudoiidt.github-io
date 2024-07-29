@@ -4,6 +4,7 @@
 img {
     max-width: 100%;
     height: auto;
+    /*高さ自動*/
     text-align: center;
 }
 
@@ -162,7 +163,6 @@ main {
     background-color: rgba(41, 158, 97, 0.85);
     font-weight: bold;
 }
-
 
 .infotitle h4 {
     margin: 0.5rem 0;
