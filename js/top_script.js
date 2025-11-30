@@ -1,11 +1,11 @@
-// ページ全体（画像などを含む）が完全に読み込まれた後に実行
-window.addEventListener('load', function() {
+// HTMLドキュメントの読み込みと解析が完了した後に実行
+document.addEventListener('DOMContentLoaded', function() {
     const splash = document.getElementById('splash');
     const mainContainer = document.querySelector('.main-container'); // メインコンテナを取得
 
-    
     // スライドインアニメーションを開始
     if (splash) {
+        // スライドインアニメーションの開始 (UIはそのまま維持)
         splash.classList.add('is-active');
 
         // スライドインアニメーションが完了するまで待機（CSSで1.5s設定）
@@ -26,6 +26,7 @@ window.addEventListener('load', function() {
 });
 
 
+// DOMContentLoadedの処理と分離し、ホバー等の処理を独立させる
 document.addEventListener('DOMContentLoaded', function() {
     const groupLogo = document.getElementById('groupLogo');
     
