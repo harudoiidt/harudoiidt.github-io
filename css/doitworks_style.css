@@ -1,0 +1,81 @@
+/* General Reset & Base */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #F9F9F9; /* Group Color 3 */
+    color: #1A1A1A;            /* Group Color 2 */
+    overflow-x: hidden;
+}
+
+/* Typography */
+.font-en {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Hero Section Animation */
+.hero-bg {
+    background-color: #1A1A1A;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(0, 240, 255, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(255, 0, 128, 0.1) 0%, transparent 20%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Custom Utilities */
+.glass-header {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.service-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* "Do it!!" Accent Animations */
+.do-it-underline {
+    position: relative;
+    display: inline-block;
+}
+.do-it-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00F0FF, #FF0080);
+    transition: width 0.6s ease;
+}
+.do-it-underline.in-view::after {
+    width: 100%;
+}
+
+/* Mobile Menu */
+#mobile-menu {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+}
+#mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Scroll Animation Classes */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

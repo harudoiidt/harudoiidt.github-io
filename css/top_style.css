@@ -1,0 +1,272 @@
+/* 基本リセット */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* 画面全体を使用 */
+    overflow: hidden; /* スクロールを禁止 */
+}
+
+body {
+    font-family: 'Hiragino Sans', 'メイリオ', Meiryo, sans-serif;
+    background-color: #f4f4f4; /* 背景色を設定 (画面端の余白の色になる) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 画面全体の中央に配置するためのコンテナ */
+.main-container {
+    /* 要件④: 画面端を意図的に空白に開けるため、幅と高さを100%未満に設定 */
+    width: 96vw; 
+    height: 96vh;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* 見やすさのための影 */
+    
+    opacity: 0; /* 初期状態では透明 */
+    transition: opacity 0.5s ease; /* フェードイン用 */
+}
+
+/* JavaScriptで付与するクラス：メインコンテンツをフェードイン表示 */
+.main-container.is-loaded {
+    opacity: 1;
+}
+
+/* 4つの事業ブロックを配置するためのグリッド */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2列 */
+    grid-template-rows: 1fr 1fr;   /* 2行 */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 5; /* グループロゴより奥に配置 */
+}
+
+/* 各事業カードの共通スタイル */
+.business-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #f9f9f9; /* テキストとロゴのデフォルト色 (黒フィルターの上に表示するため) */
+    position: relative;
+    overflow: hidden;
+    /* 要件①: エリアサイズをvw:50%, vh:50% (grid-containerが96vw x 96vhなので、その1/4) */
+}
+
+/* 背景画像と黒フィルター */
+.business-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+
+/* 黒フィルター */
+.business-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 黒フィルター（初期状態: より透明） */
+    background-color: rgba(0, 0, 0, 0.6); 
+    transition: background-color 0.3s ease;
+}
+
+/* 要件②: ホバー時のフィルター（より濃く） */
+.business-card:hover::after {
+    background-color: rgba(0, 0, 0, 0.8); /* 黒を濃くする */
+}
+.business-card:hover::before {
+    transform: scale(1.05); /* 背景画像を少し拡大 */
+}
+
+/* 部門名とロゴのコンテナ（画面中央配置） */
+.business-card .content {
+    position: relative;
+    z-index: 15; /* フィルターより手前に */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 部門名スタイル */
+.department-name {
+    font-size: 1.5vw; /* ビューポート幅に合わせて文字サイズを調整 */
+    font-weight: bold;
+    margin-bottom: 20px;
+    /* ロゴの上部に配置 */
+}
+
+/* ロゴ画像スタイル */
+.business-card img {
+    max-width: 70%;
+    max-height: 50%;
+    height: auto;
+    object-fit: contain;
+    /* ホバー時のロゴをより目立たせるためのトランジション */
+    transition: transform 0.3s ease; 
+}
+
+.business-card:hover img {
+    transform: scale(1.05);
+}
+
+/* --- 事業ごとの背景画像設定 --- */
+
+/* 1. 資源循環・廃棄物処理事業 */
+.business-1::before {
+    /* 実際には、画像ファイル名（例: bg-waste.png）に置き換えてください */
+    background-image: url('../img/bg-waste.png'); 
+}
+
+/* 2. カーサービス事業 */
+.business-2::before {
+    /* 実際には、画像ファイル名（例: bg-car.png）に置き換えてください */
+    background-image: url('../img/bg-car.png');
+}
+
+/* 3. デザイン＆マーケティング */
+.business-3::before {
+    /* 実際には、画像ファイル名（例: bg-design.png）に置き換えてください */
+    background-image: url('../img/bg-design.png');
+}
+
+/* 4. 福祉事業 */
+.business-4::before {
+    /* 実際には、画像ファイル名（例: bg-fukushi.png）に置き換えてください */
+    background-image: url('../img/bg-fukushi.png');
+}
+
+/* --- 中央のグループロゴ --- */
+.group-logo-wrapper {
+    /* 要件③: 画面中央に配置（main-containerに対して） */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* 事業ブロックとフィルターの間 */
+    pointer-events: none; /* クリックイベントを通過させる */
+    width: 20vw; /* サイズをビューポート幅で指定 */
+    max-width: 250px;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-logo-wrapper img {
+    max-width: 100%;
+    height: auto;
+    /* グループロゴが目立つように、画像自体のスタイルを調整 */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+/* スマートフォン表示用の調整 */
+@media (max-width: 768px) {
+    .main-container {
+        width: 100vw;
+        height: 100vh;
+        box-shadow: none;
+    }
+    .grid-container {
+        grid-template-columns: 1fr; /* 1列にする */
+        grid-template-rows: repeat(4, 1fr); /* 4行にする */
+    }
+    .group-logo-wrapper {
+        width: 150px;
+        height: 150px;
+        /* スマホでは邪魔になるため非表示にすることも検討 */
+        /* display: none; */ 
+    }
+    .department-name {
+        font-size: 5vw; 
+    }
+}
+
+/* ▼ 【ここから修正】ローディング画面のCSS ▼ */
+
+/* ローディング画面全体 */
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #333;
+    text-align: center;
+}
+
+/* ローディングロゴ（グループロゴ）のコンテナ */
+#splash-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    /* デスクトップ表示でのロゴサイズを大きくする */
+    width: 400px; /* ここを大きくしました */
+    height: auto;
+}
+
+#splash-logo img {
+    width: 100%;
+    height: auto;
+    animation: rotate-logo 1.5s ease-in-out forwards;
+}
+
+/* ロゴ回転アニメーションの定義 */
+@keyframes rotate-logo {
+    0% {
+        transform: rotateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateY(360deg);
+        opacity: 1;
+    }
+}
+
+/* 背景のスライドイン用要素 */
+.splash-bg {
+    width: 100%;
+    height: 50vh;
+    background-color: #f4f4f4;
+    position: fixed;
+    z-index: 998;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%); 
+    transition: transform 1.5s ease-in-out;
+}
+
+/* JavaScriptで付与するクラス：背景をスライドインさせる */
+#splash.is-active .splash-bg {
+    transform: translateY(0);
+}
+
+/* JavaScriptで付与するクラス：ローディング画面全体をフェードアウト */
+#splash.fade-out {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+    visibility: hidden;
+}
+
+/* スマートフォン表示用の調整 (ローディングロゴのサイズを元に戻す) */
+@media (max-width: 768px) {
+    #splash-logo {
+        width: 150px; /* スマホでは小さめに */
+    }
+}
+
+/* ▲ 【ここまで修正】ローディング画面のCSS ▲ */

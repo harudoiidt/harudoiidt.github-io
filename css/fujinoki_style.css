@@ -1,0 +1,451 @@
+/* -------------------------------------- */
+/* CSS Variable and Base Styles */
+/* -------------------------------------- */
+:root {
+    /* 事業所色（藤色） R:186 G:167 B:204 */
+    --color-main: #baa7cc; 
+    /* グループ色②（濃いグレー） R:26 G:26 B:26 */
+    --color-text: #1a1a1a; 
+    /* グループ色③（ほぼ白） R:249 G:249 B:249 */
+    --color-bg: #f9f9f9;    
+    /* グループ色①（シアン） R:0 G:240 B:255 - グループ関連のみ使用 */
+    --color-accent-group: #00f0ff; 
+
+    --font-family-base: 'Noto Sans JP', sans-serif;
+}
+
+body {
+    font-family: var(--font-family-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-main);
+}
+
+/* -------------------------------------- */
+/* Layout & Sections */
+/* -------------------------------------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    display: inline-block;
+    border-bottom: 4px solid var(--color-main);
+    padding-bottom: 5px;
+    color: var(--color-text);
+}
+
+/* -------------------------------------- */
+/* Header & Navigation */
+/* -------------------------------------- */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+header nav a {
+    margin-left: 30px;
+    font-weight: 600;
+    padding: 5px 0; /* タッチ領域の確保 */
+}
+
+/* ロゴのスタイル */
+.logo img {
+    height: 40px; /* fujinoki メインロゴ.pngのサイズに合わせる */
+    width: auto;
+}
+
+/* -------------------------------------- */
+/* Hero Section */
+/* -------------------------------------- */
+.hero {
+    background-color: var(--color-main);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* bg-fukushi.pngの画像が表示されるよう背景画像設定の確認を推奨 */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* 画像bg-fukushi.jpgの上に重ねる半透明のオーバーレイ */
+    border-radius: 0 0 20px 20px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* -------------------------------------- */
+/* CTA Button (メインアクションボタン) */
+/* -------------------------------------- */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-main);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    white-space: nowrap; /* ボタン内のテキスト折り返し防止 */
+}
+
+.cta-button:hover {
+    background-color: #a08fc1; /* 少し濃い藤色 */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* -------------------------------------- */
+/* About Section */
+/* -------------------------------------- */
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-content h3 {
+    font-size: 1.8rem;
+    color: var(--color-main);
+    margin-bottom: 20px;
+}
+
+.about-text.full-width-content {
+    flex: 1; /* 100%幅を取るように調整 */
+}
+
+/* -------------------------------------- */
+/* Service Flow Section */
+/* -------------------------------------- */
+.service-flow-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.flow-item {
+    text-align: center;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.flow-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-main);
+}
+
+.flow-step-number {
+    display: inline-block;
+    background-color: var(--color-main);
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.flow-item h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+/* -------------------------------------- */
+/* Details Section (事業内容集約) */
+/* -------------------------------------- */
+#details {
+    background-color: white;
+}
+
+.office-details-container {
+    display: flex;
+    gap: 40px;
+}
+
+.office-details {
+    flex: 1;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--color-bg);
+}
+
+.office-details h3 {
+    font-size: 1.5rem;
+    color: var(--color-main);
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--color-main);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.office-details dl {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 15px 15px;
+    line-height: 1.5;
+}
+
+.office-details dt {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.map-placeholder {
+    flex: 1;
+    background-color: #e9e9e9;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: hidden;
+    color: #555;
+    text-align: center;
+}
+
+/* -------------------------------------- */
+/* Contact Section */
+/* -------------------------------------- */
+.contact {
+    background-color: var(--color-text); /* グループ色② (濃いグレー) を使用 */
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    color: white;
+    border-bottom-color: white;
+}
+
+.contact-actions {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 35px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-button.phone {
+    background-color: var(--color-main);
+    color: white;
+}
+
+.contact-button.phone:hover {
+    background-color: #a08fc1;
+    transform: scale(1.05);
+}
+
+.contact-button.mail {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+}
+
+.contact-button.mail:hover {
+    background-color: white;
+    color: var(--color-text);
+}
+
+.contact-button svg {
+    margin-right: 10px;
+    width: 28px;
+    height: 28px;
+}
+
+/* -------------------------------------- */
+/* Footer */
+/* -------------------------------------- */
+footer {
+    background-color: white;
+    padding: 40px 0 20px;
+    border-top: 5px solid var(--color-main);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    min-width: 200px;
+}
+
+.footer-section h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-main);
+    margin-bottom: 10px;
+}
+
+.footer-nav ul, .footer-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Doiグループロゴ (group-logo-2.png)の表示 */
+.doi-group-info {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #ccc;
+}
+
+.doi-group-info img {
+    height: 20px;
+    width: auto;
+    /* グループ色① (シアン) の使用を避けるため、ロゴはモノクロ画像 (group-logo-2.png) を使用することを想定 */
+}
+
+.doi-group-info p {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* -------------------------------------- */
+/* Media Queries (Responsive Design) */
+/* -------------------------------------- */
+@media (max-width: 900px) {
+    .about-content {
+        /* 特長セクションは元々2カラムだったが、office-info削除で1カラムになったため flex: 1 で対応 */
+        flex-direction: column;
+    }
+    .about-text, .office-details {
+        width: 100%;
+    }
+    .office-details-container {
+        flex-direction: column;
+    }
+    .office-details, .map-placeholder {
+        width: 100%;
+        min-height: 300px;
+    }
+    .office-details {
+        margin-bottom: 20px;
+    }
+    .footer-content {
+        justify-content: center;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+    }
+    .footer-nav ul, .footer-info ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none; /* モバイル時はメニューを非表示（JSでハンバーガーメニューを実装する想定） */
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+    .contact-actions {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contact-button {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="株式会社ドイ産業のデザイン＆マーケティング事業部「Do it !! works」。Web制作、ロゴデザイン、動画制作、ブランディングを通じて、ビジネスの課題を解決します。">
+    <title>デザイン＆マーケティング Do it !! works</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'group-cyan': '#00F0FF',      // Group Color 1
+                        'group-dark': '#1A1A1A',      // Group Color 2
+                        'group-light': '#F9F9F9',     // Group Color 3
+                        'brand-pink': '#FF0080',      // Triad 1
+                        'brand-yellow': '#D4FF00',    // Triad 2
+                        'brand-cyan': '#00C2CF',      // Triad 3
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        en: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/doitworks_style.css">
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <header class="fixed w-full top-0 z-50 glass-header transition-all duration-300" id="header">
+        <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+            <img src="img/logo-doit-bk.png" alt="Do it !! works" class="w-64">
+
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#about" class="text-sm font-bold hover:text-brand-cyan transition-colors">ABOUT</a>
+                <a href="#services" class="text-sm font-bold hover:text-brand-cyan transition-colors">SERVICE</a>
+                <a href="#achievements" class="text-sm font-bold hover:text-brand-cyan transition-colors">WORKS</a>
+                <a href="#company" class="text-sm font-bold hover:text-brand-cyan transition-colors">COMPANY</a>
+                <a href="#contact"
+                    class="bg-group-dark text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-brand-pink transition-all duration-300 shadow-lg transform hover:-translate-y-1">
+                    CONTACT <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-2xl text-group-dark focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 flex flex-col justify-center items-center gap-8 md:hidden">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-3xl">
+            <i class="fa-solid fa-times"></i>
+        </button>
+        <a href="#about" class="text-2xl font-bold mobile-link">ABOUT</a>
+        <a href="#services" class="text-2xl font-bold mobile-link">SERVICE</a>
+        <a href="#achievements" class="text-2xl font-bold mobile-link">WORKS</a>
+        <a href="#company" class="text-2xl font-bold mobile-link">COMPANY</a>
+        <a href="#contact" class="text-xl font-bold text-brand-pink mobile-link">CONTACT</a>
+    </div>
+
+    <main class="flex-grow pt-20">
+
+        <section class="hero-bg min-h-[85vh] flex items-center relative text-white">
+            <div class="absolute top-1/4 left-10 w-20 h-20 border border-white/10 rounded-full animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-10 w-40 h-40 border border-brand-cyan/20 rounded-full"></div>
+
+            <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 fade-up">
+                    <div
+                        class="inline-block px-3 py-1 border border-brand-cyan text-brand-cyan text-xs font-bold tracking-widest mb-2">
+                        DESIGN & MARKETING
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-black font-en leading-tight">
+                        JUST <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-group-cyan to-brand-pink">DO IT
+                            !!</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 font-light leading-relaxed max-w-lg">
+                        想いをカタチに、未来を動かす。<br>
+                        信頼と革新のデザインで、<br>
+                        あなたのビジネスを加速させます。
+                    </p>
+                    <div class="pt-6">
+                        <a href="#contact"
+                            class="inline-flex items-center gap-3 bg-white text-group-dark px-8 py-4 font-bold rounded-sm hover:bg-brand-cyan hover:text-white transition-all duration-300">
+                            プロジェクトを始める
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex justify-center items-center fade-up" style="transition-delay: 0.2s;">
+                    <div class="relative w-80 h-80">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-brand-cyan to-brand-pink opacity-20 blur-3xl rounded-full">
+                        </div>
+                        <div
+                            class="relative z-10 w-full h-full border-2 border-white/20 rounded-lg flex items-center justify-center transform rotate-6 hover:rotate-0 transition-transform duration-700">
+                            <span class="font-en text-6xl font-black text-white/10">CREATIVE</span>
+                        </div>
+                        <div
+                            class="absolute -top-10 -right-10 w-32 h-32 bg-group-dark border border-brand-yellow/50 rounded-lg flex items-center justify-center transform -rotate-12 z-20 shadow-2xl">
+                            <i class="fa-solid fa-lightbulb text-4xl text-brand-yellow"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 bg-white relative">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <span class="text-brand-pink font-en font-bold text-sm tracking-wider block mb-3">WHO WE ARE</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 do-it-underline">信頼と挑戦を、ひとつのデザインに。</h2>
+                    <p class="text-gray-600 leading-loose mb-10 text-justify md:text-center">
+                        私たち「Do it!! works」は、新しい時代を切り拓く「実行する（Do
+                        it!!）」という熱い精神を核に、機動力に富んだデザインとマーケティングを提供するプロフェッショナル集団です。<br>
+                        既存の枠にとらわれない圧倒的な機動力と培ってきた確かな信頼性を武器に、「まず実行し、形にする」ことを最も大切にしています。<br><br>
+                        企業のロゴ制作からWeb戦略、動画、サウンドデザインに至るまで。
+                        <br>私たちはあらゆるクリエイティブ領域をワンストップで網羅し、あなたのビジネスの「やりたい」という熱意を、誰よりも速く、必ず「カタチ」にします。
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto text-center">
+                        <div class="p-4 border-r border-gray-100">
+                            <h3 class="font-en font-black text-2xl text-group-dark">Reliability</h3>
+                            <p class="text-xs text-gray-400 mt-1">信頼と実績</p>
+                        </div>
+                        <div class="p-4 border-r border-gray-100">
+                            <h3 class="font-en font-black text-2xl text-group-dark">Quality</h3>
+                            <p class="text-xs text-gray-400 mt-1">高品質</p>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-en font-black text-2xl text-group-dark">Speed</h3>
+                            <p class="text-xs text-gray-400 mt-1">実行力</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-24 bg-group-light">
+            <div class="container mx-auto px-6">
+                <div class="flex justify-between items-end mb-16">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-en font-black text-group-dark mb-4">SERVICE</h2>
+                        <p class="text-gray-500">多角的なアプローチで課題を解決します</p>
+                    </div>
+                    <a href="doitworks-service.html"
+                        class="hidden md:inline-block text-sm font-bold border-b-2 border-group-dark pb-1 hover:text-brand-cyan hover:border-brand-cyan transition-colors">
+                        VIEW ALL <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article
+                        class="service-card bg-white p-8 rounded-lg shadow-sm border-t-4 border-brand-pink fade-up">
+                        <div
+                            class="w-14 h-14 bg-brand-pink/10 rounded-full flex items-center justify-center mb-6 text-brand-pink text-2xl">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">デザイン & ブランディング</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            企業の顔となるコーポレートロゴの制作から、名刺・チラシなどの紙媒体まで。一貫した世界観でブランド価値を高めます。
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-2">
+                            <li><i class="fa-solid fa-check text-brand-pink mr-2"></i>ロゴ製作</li>
+                            <li><i class="fa-solid fa-check text-brand-pink mr-2"></i>名刺・チラシ・パンフレット等の刊行物製作</li>
+                            <li><i class="fa-solid fa-check text-brand-pink mr-2"></i>ステッカー製作 etc...</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card bg-white p-8 rounded-lg shadow-sm border-t-4 border-brand-cyan fade-up"
+                        style="transition-delay: 0.1s;">
+                        <div
+                            class="w-14 h-14 bg-brand-cyan/10 rounded-full flex items-center justify-center mb-6 text-brand-cyan text-2xl">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Web & マーケティング</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            見栄えの良いWebサイトを作るだけでなく、SNS運用と連携させた「集客できる」仕組みを構築します。
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-2">
+                            <li><i class="fa-solid fa-check text-brand-cyan mr-2"></i>Webサイト作成・運用</li>
+                            <li><i class="fa-solid fa-check text-brand-cyan mr-2"></i>SNS運用代行・戦略立案</li>
+                            <li><i class="fa-solid fa-check text-brand-cyan mr-2"></i>デジタル広告運用 etc...</li>
+                        </ul>
+                    </article>
+
+                    <article
+                        class="service-card bg-white p-8 rounded-lg shadow-sm border-t-4 border-brand-yellow fade-up"
+                        style="transition-delay: 0.2s;">
+                        <div
+                            class="w-14 h-14 bg-brand-yellow/10 rounded-full flex items-center justify-center mb-6 text-brand-yellow text-2xl">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">動画 & サウンド製作</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            視覚と聴覚に訴えかける高品質なコンテンツ制作。CM、プロモーション動画、オリジナル楽曲まで対応可能です。
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-2">
+                            <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i>動画・CM製作・編集</li>
+                            <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i>楽曲製作・BGM作成</li>
+                            <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i>Webコンテンツ制作 etc...</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="mt-8 text-center md:hidden">
+                    <a href="doitworks-service.html"
+                        class="inline-block text-sm font-bold border-b border-gray-400 pb-1">
+                        VIEW ALL SERVICES
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-en font-black text-group-dark mb-12 text-center">WORKS</h2>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+                    <a href="doitworks.html" target="_blank"
+                        class="group relative overflow-hidden rounded-lg aspect-square">
+                        <img src="img/doitworks/corporatelogo.png" alt="Corporate Logo"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-group-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+                            <h4 class="font-bold text-lg mb-2">Design</h4>
+                            <p class="text-xs">あなただけのデザインを作成します！</p>
+
+                        </div>
+                    </a>
+
+                    <a href="index.html" target="_blank"
+                        class="group relative overflow-hidden rounded-lg aspect-square">
+                        <img src="img/doitworks/website.png" alt="Brand Website"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-group-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+                            <h4 class="font-bold text-lg mb-2">Website</h4>
+                            <p class="text-xs">より良い信頼性を！</p>
+
+                        </div>
+                    </a>
+
+                    <a href="doitworks.html" target="_blank"
+                        class="group relative overflow-hidden rounded-lg aspect-square">
+                        <img src="img/doitworks/pv.png" alt="Promotion Video"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-group-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+                            <h4 class="font-bold text-lg mb-2">Promotion Video</h4>
+                            <p class="text-xs">お客様の認知を加速させます！</p>
+                        </div>
+                    </a>
+
+                    <a href="https://youtu.be/example-video-id-04" target="_blank"
+                        class="group relative overflow-hidden rounded-lg aspect-square">
+                        <img src="img/doitworks/music.png" alt="Sound Logo"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-group-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+                            <h4 class="font-bold text-lg mb-2">Music</h4>
+                            <p class="text-xs">お客様にあったサウンドを提供します！</p>
+                            <i class="fa-brands fa-youtube text-4xl text-brand-cyan mt-3"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="doitworks.html"
+                        class="inline-block px-10 py-3 border-2 border-group-dark text-group-dark font-bold hover:bg-group-dark hover:text-white transition-colors">
+                        実績一覧を見る
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-group-dark text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-gray-800 to-transparent opacity-30">
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                            何かを始めるとき、<br>
+                            まずは私たちに<br>
+                            <span class="text-brand-cyan">Do it !!</span> と伝えてください。
+                        </h2>
+                        <p class="text-gray-400 mb-8">
+                            デザインや広報戦略に関するご相談、お見積もりのご依頼など、<br>
+                            お気軽にお問い合わせください。企業・個人問わず対応可能です。
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="mailto:contact-doitworks@doiidt.com"
+                                class="bg-brand-cyan text-group-dark text-center px-8 py-4 font-bold rounded-sm hover:bg-white transition-colors shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
+                                お問い合わせフォーム
+                            </a>
+                            <a href="tel:0000000000"
+                                class="border border-gray-600 text-white text-center px-8 py-4 font-bold rounded-sm hover:border-brand-cyan hover:text-brand-cyan transition-colors">
+                                <i class="fa-solid fa-phone mr-2"></i>0982-32-2435
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 bg-white/5 p-8 rounded-lg backdrop-blur-sm border border-white/10 w-full">
+                        <h3 class="text-xl font-bold mb-4 border-b border-white/10 pb-4">Business Info</h3>
+                        <dl class="space-y-4 text-sm">
+                            <div>
+                                <dt class="text-gray-400 text-xs block mb-1">Company</dt>
+                                <dd class="font-medium">デザイン＆マーケティング 【 Do it !! works 】</dd>
+                            </div>
+                            <div>
+                                <dt class="text-gray-400 text-xs block mb-1">Area</dt>
+                                <dd class="font-medium">全国（オンライン対応可）</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="company" class="bg-black text-gray-400 py-12 border-t border-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="inline-block mb-4">
+                        <img src="img/logo-doit-bk.png" alt="Do it !! works" class="w-64 filter invert">
+                    </a>
+                    <p class="text-xs leading-relaxed max-w-sm mb-6">
+                        デザインと戦略で、「出来ない」という常識を覆す。<br>私たちが約束する実現力は "Do it !!"
+                    </p>
+                    <div class="space-y-1 text-xs">
+                        <p>〒882-0864</p>
+                        <p>宮崎県延岡市大武町1323番地 株式会社ドイ産業 事務所内</p>
+                        <p>TEL: 0982-32-2435</p>
+                        <p>E-mail: contact-doitworks@doiidt.com</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm">SITEMAP</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="doitworks.html" class="hover:text-brand-cyan transition-colors">Site Top</a></li>
+                        <li><a href="#about" class="hover:text-brand-cyan transition-colors">私たちについて</a></li>
+                        <li><a href="#services" class="hover:text-brand-cyan transition-colors">サービス一覧</a></li>
+                        <li><a href="#achievements" class="hover:text-brand-cyan transition-colors">制作実績</a></li>
+                        <li><a href="#contact" class="hover:text-brand-cyan transition-colors">会社概要・お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm">FOLLOW US</h4>
+                    <div class="flex gap-4 mb-8">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-cyan hover:text-white transition-colors"
+                            aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-cyan hover:text-white transition-colors"
+                            aria-label="Line"><i class="fa-brands fa-line"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-cyan hover:text-white transition-colors"
+                            aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+
+                    <div class="mt-6 border-t border-gray-900 pt-6">
+                        <a href="index.html" class="inline-block mb-2">
+                            <img src="img/group-logo-2.png" alt="Doi Group Logo" class="w-48 filter invert opacity-80">
+                        </a>
+                        <p class="text-xs">
+                            Do it!! works は Doiグループ です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-900 pt-8 text-center text-xs text-gray-600 flex flex-col md:flex-row justify-between items-center">
+                <p>COPYRIGHT &#169; Doi Group. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/doitworks_script.js"></script>
+</body>
+
+</html>
